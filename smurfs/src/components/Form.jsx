@@ -4,9 +4,7 @@ import {fetchSmurfs, addSmurf} from '../actions';
 import styled from 'styled-components';
 
 const Div = styled.div`
-    h1 {
-        text-align: center;
-    }
+
     form {
         width: 30%;
         margin: auto;
