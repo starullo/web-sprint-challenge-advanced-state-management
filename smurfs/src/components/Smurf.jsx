@@ -12,12 +12,18 @@ const Div = styled.div`
 `
 
 const Smurf = (props) => {
-    
+    const {id} = useParams();
+    const {url, path} = useRouteMatch();
+
+    const smurf = props.smurfs.find(s=>{
+        return s.id == id;
+    }) || {};
+
     return (
         <Div>
-            <h1>{props.smurf.name}</h1>
-            <p>{props.smurf.age}</p>
-            <p>{props.smurf.height}</p>
+            <h1>{smurf.name}</h1>
+            <p>{smurf.age}</p>
+            <p>{smurf.height}</p>
         </Div>
     )
 }

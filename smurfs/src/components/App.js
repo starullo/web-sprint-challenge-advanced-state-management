@@ -5,6 +5,7 @@ import Form from './Form.jsx';
 import Saved from './Saved.jsx';
 import {Route, Link, Switch, NavLink} from 'react-router-dom';
 import styled from 'styled-components';
+import Smurf from './Smurf.jsx';
 
 const Div = styled.div`
 nav {
@@ -33,6 +34,9 @@ function App(props) {
       <NavLink to='/smurfs'>BROWSE SMURFS</NavLink>
       </nav>
       <Switch>
+        <Route path='/smurfs/:id'>
+          <Smurf smurfs={props.smurfs} />
+        </Route>
         <Route path='/form'>
           <Form />
         </Route>
@@ -53,6 +57,7 @@ function App(props) {
  const mapStateToProps = state => {
     return {
       isFetching: state.isFetching,
+      smurfs: state.smurfs,
     }
  }
 
