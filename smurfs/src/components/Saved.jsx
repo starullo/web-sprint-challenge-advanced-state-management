@@ -11,10 +11,25 @@ const Div = styled.div`
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-    margin-top: 3%;
+    margin: 3% auto;
+    width: 90%;
 
     a {
         text-decoration: none;
+        display: inline-block;
+        width: 20%;
+        margin: 3% auto;
+        border: solid 2px black;
+        padding: 1%;
+        text-align: center;
+        color: white;
+        background-color: #0022ff;
+        letter-spacing: 1px;
+        transition: all 0.5s ease-in-out;
+
+        &:hover {
+            letter-spacing: 4px;
+        }
     }
 `
 

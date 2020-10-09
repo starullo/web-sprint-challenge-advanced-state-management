@@ -20,6 +20,12 @@ nav {
     padding: 1%;
     border-radius: 10px;
     margin: 3% auto;
+    transition: all 0.5s ease-in-out;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 `
